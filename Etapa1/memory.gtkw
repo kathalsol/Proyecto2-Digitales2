@@ -1,0 +1,39 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Mon Nov  8 04:27:58 2021
+[*]
+[dumpfile] "/home/raque/Descargas/Proyecto2-Digitales2-main/Avance1/memory.vcd"
+[dumpfile_mtime] "Mon Nov  8 04:22:00 2021"
+[dumpfile_size] 111364
+[savefile] "/home/raque/Descargas/Proyecto2-Digitales2-main/Avance1/memory.gtkw"
+[timestart] 1
+[size] 1230 551
+[pos] -1 -1
+*-1.902389 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 127
+@200
+-ENTRADAS
+@28
+BancoPrueba_memory.clk
+BancoPrueba_memory.reset
+@22
+BancoPrueba_memory.data_in_MM[9:0]
+@28
+BancoPrueba_memory.push
+BancoPrueba_memory.wr_ptr[2:0]
+BancoPrueba_memory.pop
+BancoPrueba_memory.rd_ptr[2:0]
+@200
+-SALIDAS
+@22
+BancoPrueba_memory.data_out_MM[9:0]
+BancoPrueba_memory.data_out_MM_sint[9:0]
+@200
+-SEÑAL VERIFICADORA
+@28
+BancoPrueba_memory.probador_mem.checker
+[pattern_trace] 1
+[pattern_trace] 0
