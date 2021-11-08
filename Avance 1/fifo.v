@@ -72,7 +72,7 @@ module fifo #(
 
 	memory #(	.MEM_SIZE (MEM_SIZE), 
 				.WORD_SIZE(WORD_SIZE), 
-				.PTR_L(PTR_L)) memoria(		.clk			(clk),
+				.PTR(PTR)) memoria(			.clk			(clk),
 											.reset			(reset),
 											.push			(push),
 				      						.pop			(pop),
