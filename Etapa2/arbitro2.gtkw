@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Nov 13 19:06:28 2021
+[*]
+[dumpfile] "/home/raque/Escritorio/PARTE2/Entregable2/arbitro2.vcd"
+[dumpfile_mtime] "Sat Nov 13 19:03:50 2021"
+[dumpfile_size] 26300
+[savefile] "/home/raque/Escritorio/PARTE2/Entregable2/arbitro2.gtkw"
+[timestart] 0
+[size] 1230 551
+[pos] -1 -1
+*-3.126187 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 214
+[sst_expanded] 1
+[sst_vpaned_height] 127
+@200
+-ENTRADAS
+@28
+BancoPrueba_arbitro2.clk
+BancoPrueba_arbitro2.reset
+BancoPrueba_arbitro2.fifo_empty
+@22
+BancoPrueba_arbitro2.fifos_almost_full[3:0]
+BancoPrueba_arbitro2.data_in_arb[11:0]
+@200
+-SALIDAS
+@22
+BancoPrueba_arbitro2.cuenta_4[4:0]
+BancoPrueba_arbitro2.cuenta_4_sint[4:0]
+BancoPrueba_arbitro2.data_out_arb[11:0]
+BancoPrueba_arbitro2.data_out_arb_sint[11:0]
+BancoPrueba_arbitro2.push[3:0]
+BancoPrueba_arbitro2.push_sint[3:0]
+@28
+BancoPrueba_arbitro2.pop
+BancoPrueba_arbitro2.pop_sint
+@200
+-SEÑAL VERIFICADORA
+@22
+BancoPrueba_arbitro2.checker[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
