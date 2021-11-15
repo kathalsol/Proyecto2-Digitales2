@@ -12,10 +12,7 @@ module arbitro1 #(
     input [WORD_SIZE-1:0] fifo_data_in3,
     output reg [3:0] fifos_push,
     output reg [3:0] fifos_pop,
-    output reg [WORD_SIZE-1:0] fifo_data_out_cond0,
-    output reg [WORD_SIZE-1:0] fifo_data_out_cond1,
-    output reg [WORD_SIZE-1:0] fifo_data_out_cond2,
-    output reg [WORD_SIZE-1:0] fifo_data_out_cond3
+    output reg [WORD_SIZE-1:0] fifo_data_out_cond
 );  
     reg [WORD_SIZE-1:0] data_intermediate;
     reg [1:0] dest;
@@ -25,12 +22,8 @@ module arbitro1 #(
         if (!reset) begin
             fifos_pop <= 0;
             fifos_push <= 0;
-            fifo_data_out_cond0 <= 0;
-            fifo_data_out_cond1 <= 0;
-            fifo_data_out_cond2 <= 0;
-            fifo_data_out_cond3 <= 0;
+            fifo_data_out_cond <= 0;
             data_intermediate <= 0;
-            dest <= 0;
             prioridad <= 0;
         end
         else begin
@@ -112,33 +105,22 @@ module arbitro1 #(
                     case (dest)
                         2'b00: begin
                             if (fifos_almost_full[0] == 1) fifos_push[0] <= 0;
-                            else begin
-                                fifos_push[0] <= 1;
-                                fifo_data_out_cond0 <= data_intermediate;
-                            end
+                            else fifos_push[0] <= 1;
                         end
                         2'b01: begin
                             if (fifos_almost_full[1] == 1) fifos_push[1] <= 0;
-                             else begin
-                                fifos_push[1] <= 1;
-                                fifo_data_out_cond1 <= data_intermediate;
-                            end
+                             else fifos_push[1] <= 1;
                         end
                         2'b10: begin
                             if (fifos_almost_full[2] == 1) fifos_push[2] <= 0;
-                            else begin
-                                fifos_push[2] <= 1;
-                                fifo_data_out_cond2 <= data_intermediate;
-                            end
+                            else fifos_push[2] <= 1;
                         end
                         2'b11: begin
                             if (fifos_almost_full[3] == 1) fifos_push[3] <= 0;
-                            else begin
-                                fifos_push[3] <= 1;
-                                fifo_data_out_cond3 <= data_intermediate;
-                            end
+                            else fifos_push[3] <= 1;
                         end
                     endcase
+                    fifo_data_out_cond <= data_intermediate;
                 end
             end
         end

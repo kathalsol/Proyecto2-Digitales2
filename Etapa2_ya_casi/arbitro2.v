@@ -20,7 +20,6 @@ module arbitro2 #(
             pop <= 0;
             push <= 0;
             cuenta_4 <= 0;
-            class <= 0;
             data_out_arb <= 0;
         end
         else begin

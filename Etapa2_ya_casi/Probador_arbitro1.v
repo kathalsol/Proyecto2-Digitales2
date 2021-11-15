@@ -11,16 +11,10 @@ module Probador_arbitro1 #(
     output reg [WORD_SIZE-1:0] fifo_data_in3,
     input [3:0] fifos_push,
     input [3:0] fifos_pop,
-    input [WORD_SIZE-1:0] fifo_data_out_cond0,
-    input [WORD_SIZE-1:0] fifo_data_out_cond1,
-    input [WORD_SIZE-1:0] fifo_data_out_cond2,
-    input [WORD_SIZE-1:0] fifo_data_out_cond3,
+    input [WORD_SIZE-1:0] fifo_data_out_cond,
     input [3:0] fifos_push_sint,
     input [3:0] fifos_pop_sint,
-    input [WORD_SIZE-1:0] fifo_data_out_sint0,
-    input [WORD_SIZE-1:0] fifo_data_out_sint1,
-    input [WORD_SIZE-1:0] fifo_data_out_sint2,
-    input [WORD_SIZE-1:0] fifo_data_out_sint3
+    input [WORD_SIZE-1:0] fifo_data_out_sint
 );
 
     initial clk = 0;

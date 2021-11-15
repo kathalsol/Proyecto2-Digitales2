@@ -19,10 +19,7 @@ cambio_contador:
 	
 cambio_arbitro1:
 	sed -i 's/arbitro1/arbitro1_sint/g' arbitro1_sint.v
-	sed -i 's/fifo_data_out_cond0/fifo_data_out_sint0/g' arbitro1_sint.v
-	sed -i 's/fifo_data_out_cond1/fifo_data_out_sint1/g' arbitro1_sint.v
-	sed -i 's/fifo_data_out_cond2/fifo_data_out_sint2/g' arbitro1_sint.v
-	sed -i 's/fifo_data_out_cond3/fifo_data_out_sint3/g' arbitro1_sint.v
+	sed -i 's/fifo_data_out_cond/fifo_data_out_sint/g' arbitro1_sint.v
 	sed -i 's/fifos_push/fifos_push_sint/g' arbitro1_sint.v
 	sed -i 's/fifos_pop/fifos_pop_sint/g' arbitro1_sint.v
 
