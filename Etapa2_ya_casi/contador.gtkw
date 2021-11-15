@@ -1,0 +1,46 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Nov 13 16:52:04 2021
+[*]
+[dumpfile] "/home/raque/Escritorio/PARTE2/Entregable2/contador.vcd"
+[dumpfile_mtime] "Sat Nov 13 16:47:16 2021"
+[dumpfile_size] 28876
+[savefile] "/home/raque/Escritorio/PARTE2/Entregable2/contador.gtkw"
+[timestart] 0
+[size] 1230 551
+[pos] -1 -1
+*-2.764980 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 182
+[sst_expanded] 1
+[sst_vpaned_height] 127
+@200
+-ENTRADAS
+@28
+BancoPrueba_contador.clk
+BancoPrueba_contador.reset
+BancoPrueba_contador.req
+BancoPrueba_contador.idx[1:0]
+BancoPrueba_contador.IDLE
+[color] 3
+BancoPrueba_contador.pop_0
+[color] 3
+BancoPrueba_contador.pop_1
+[color] 3
+BancoPrueba_contador.pop_2
+[color] 3
+BancoPrueba_contador.pop_3
+@200
+-SALIDAS
+@22
+BancoPrueba_contador.cuenta[4:0]
+BancoPrueba_contador.cuenta_sint[4:0]
+@28
+BancoPrueba_contador.valid
+BancoPrueba_contador.valid_sint
+@200
+-SEÑAL VERIFICADORA
+@28
+BancoPrueba_contador.checker[1:0]
+[pattern_trace] 1
+[pattern_trace] 0
