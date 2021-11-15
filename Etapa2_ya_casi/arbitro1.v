@@ -123,6 +123,10 @@ module arbitro1 #(
                     fifo_data_out_cond <= data_intermediate;
                 end
             end
+            else begin
+                fifos_pop <= 0;
+                fifos_push <= 0;
+            end
         end
     end
 endmodule

@@ -21,6 +21,7 @@ module arbitro2 #(
             push <= 0;
             cuenta_4 <= 0;
             data_out_arb <= 0;
+            class <= 0;
         end
         else begin
             if (fifos_almost_full != 4'b1111) begin
@@ -61,6 +62,7 @@ module arbitro2 #(
                                 cuenta_4 <= cuenta_4 + 1;
                             end
                         end
+                        default: cuenta_4 <= 0;
                     endcase
                     data_out_arb <= data_in_arb;
                 end
