@@ -13,9 +13,7 @@ module Probador_arbitro2 #(
     input pop,
     input pop_sint,
     input [3:0] push,
-    input [3:0] push_sint,
-    input [4:0] cuenta_4,
-    input [4:0] cuenta_4_sint
+    input [3:0] push_sint
 );
     initial clk = 0;
     always #1 clk = ~clk;
@@ -33,6 +31,7 @@ module Probador_arbitro2 #(
         // Se desactiva el reset
         @(posedge clk);
         reset <= 1;
+        data_in_arb <= 12'b111011100011; 
 
         @(posedge clk);
         data_in_arb <= 12'b001011100011; 
@@ -58,6 +57,7 @@ module Probador_arbitro2 #(
         data_in_arb <= 12'b011111111101;
         
         @(posedge clk);
+        fifo_empty <= 0;
         data_in_arb <= 12'b001110011101;
         fifos_almost_full <= 4'b0001;
 

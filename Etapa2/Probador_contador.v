@@ -6,13 +6,16 @@ module Probador_contador #(
     output reg reset,
     output reg req,
     output reg [INDEX-1:0] idx,
-    output reg IDLE, 
+    output reg IDLE,
+    output reg pop, 
     output reg pop_0,
     output reg pop_1,
     output reg pop_2,
     output reg pop_3,
     input [4:0] cuenta,
+    input [4:0] contador_4,
     input [4:0] cuenta_sint,
+    input [4:0] contador_4_sint,
     input valid,
     input valid_sint
 );
@@ -29,6 +32,7 @@ module Probador_contador #(
         req <= 0;
         idx <= 0;
         IDLE <= 0;
+        pop <= 0;
         pop_0 <= 0;
         pop_1 <= 0;
         pop_2 <= 0;
@@ -39,36 +43,42 @@ module Probador_contador #(
         reset <= 1;
 
         @(posedge clk);
-        pop_0 <= 1;
+        pop <= 1;
+        pop_0 <= 0;
         pop_1 <= 0;
         pop_2 <= 0;
-        pop_3 <= 1;
+        pop_3 <= 0;
 
         @(posedge clk);
+        pop <= 1;
         pop_0 <= 1;
-        pop_1 <= 1;
+        pop_1 <= 0;
         pop_2 <= 0;
         pop_3 <= 0;
       
         @(posedge clk);
-        pop_0 <= 0;
-        pop_1 <= 1;
-        pop_2 <= 1;
+        pop <= 1;
+        pop_0 <= 1;
+        pop_1 <= 0;
+        pop_2 <= 0;
         pop_3 <= 0;
 
         @(posedge clk);
-        pop_0 <= 1;
+        pop <= 1;
+        pop_0 <= 0;
         pop_1 <= 1;
+        pop_2 <= 0;
+        pop_3 <= 0;
+
+        @(posedge clk);
+        pop <= 1;
+        pop_0 <= 0;
+        pop_1 <= 0;
         pop_2 <= 0;
         pop_3 <= 1;
 
         @(posedge clk);
-        pop_0 <= 1;
-        pop_1 <= 0;
-        pop_2 <= 1;
-        pop_3 <= 1;
-
-        @(posedge clk);
+        pop <= 1;
         pop_0 <= 0;
         pop_1 <= 0;
         pop_2 <= 0;
@@ -76,21 +86,50 @@ module Probador_contador #(
         req <= 1;
 
         @(posedge clk);
+        pop <= 1;
+        pop_0 <= 0;
+        pop_1 <= 0;
+        pop_2 <= 0;
+        pop_3 <= 1;
+
+        @(posedge clk);
+        pop <= 1;
+        pop_0 <= 0;
+        pop_1 <= 0;
+        pop_2 <= 1;
+        pop_3 <= 0;
+
+        @(posedge clk);
+        pop <= 1;
+        pop_0 <= 0;
+        pop_1 <= 1;
+        pop_2 <= 0;
+        pop_3 <= 0;
+
+        @(posedge clk);
+        pop <= 0;
+        pop_0 <= 0;
+        pop_1 <= 0;
+        pop_2 <= 1;
+        pop_3 <= 0;
+
+        @(posedge clk);
+        pop <= 0;
         pop_0 <= 0;
         pop_1 <= 0;
         pop_2 <= 0;
         pop_3 <= 0;
-        idx <= 2'b01;
+        idx <= 2'b00;
         IDLE <= 1;
 
         @(posedge clk);
-        idx <= 2'b11;
-
-        @(posedge clk);
-        idx <= 2'b00;
+        idx <= 2'b01;
 
         @(posedge clk);
         idx <= 2'b10;
+
+        @(posedge clk);
+        idx <= 2'b11;
         
         @(posedge clk);
         idx <= 2'b00;

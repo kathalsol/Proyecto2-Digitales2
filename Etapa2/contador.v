@@ -10,11 +10,13 @@ module contador #(
     input req,
     input [INDEX-1:0] idx,
     input IDLE,
+    input pop,
     input pop_0,
     input pop_1,
     input pop_2,
     input pop_3,
     output reg [4:0] cuenta,
+    output reg [4:0] contador_4,
     output reg valid
 );
     // Se crean los registros intermedios counter
@@ -22,6 +24,7 @@ module contador #(
     reg [4:0] counter_1;
     reg [4:0] counter_2;
     reg [4:0] counter_3;
+    reg [4:0] counter_4;
 
     always @(posedge clk) begin
         if(reset == 0) begin
@@ -29,6 +32,7 @@ module contador #(
             counter_1 <= 0;
             counter_2 <= 0;
             counter_3 <= 0;
+            counter_4 <= 0;
         end    
         else begin  
             if(pop_0) counter_0 <= counter_0 + 1;
@@ -38,6 +42,8 @@ module contador #(
             if(pop_2) counter_2 <= counter_2 + 1;
 
             if(pop_3) counter_3 <= counter_3 + 1;
+
+            if(pop) counter_4 <= counter_4 + 1;
         end
     end
 
@@ -54,11 +60,14 @@ module contador #(
                 2'b11: cuenta = counter_3;
             endcase
             valid = 1;
+            contador_4 = counter_4;
+
         end
         // Caso contrario: no se han sacado todos los valores 
         //  y no se ha requerido valores entonces no se indica la cuenta
         else begin
             cuenta = 0;
+            contador_4 = 0;
             valid = 0;
         end
     end

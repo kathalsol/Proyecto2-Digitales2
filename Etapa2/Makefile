@@ -15,6 +15,7 @@ arbitro2:
 cambio_contador:
 	sed -i 's/contador/contador_sint/g' contador_sint.v 
 	sed -i 's/cuenta/cuenta_sint/g' contador_sint.v
+	sed -i 's/contador_sint_4/contador_4_sint/g' contador_sint.v
 	sed -i 's/valid/valid_sint/g' contador_sint.v
 	
 cambio_arbitro1:
@@ -28,7 +29,6 @@ cambio_arbitro2:
 	sed -i 's/data_out_arb/data_out_arb_sint/g' arbitro2_sint.v
 	sed -i 's/pop/pop_sint/g' arbitro2_sint.v
 	sed -i 's/push/push_sint/g' arbitro2_sint.v 
-	sed -i 's/cuenta_4/cuenta_4_sint/g' arbitro2_sint.v
 
 simular_contador:
 	iverilog -o prueba1 BancoPrueba_contador.v 

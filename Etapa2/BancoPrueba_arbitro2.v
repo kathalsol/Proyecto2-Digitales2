@@ -19,8 +19,6 @@ module BancoPrueba_arbitro2();
     wire pop_sint;
     wire [3:0] push;
     wire [3:0] push_sint;
-    wire [4:0] cuenta_4;
-    wire [4:0] cuenta_4_sint;
  
 
     arbitro2 #( .WORD_SIZE(WORD_SIZE)) arbitro_cond1 (
@@ -34,8 +32,7 @@ module BancoPrueba_arbitro2();
                                 // salidas
                                 .data_out_arb(data_out_arb),
                                 .pop(pop),
-                                .push(push),
-                                .cuenta_4(cuenta_4));
+                                .push(push));
 
     arbitro2_sint #(.WORD_SIZE(WORD_SIZE)) arbitro2_sint1 ( 
                                     // entradas
@@ -47,8 +44,7 @@ module BancoPrueba_arbitro2();
                                     // salidas 
                                     .data_out_arb_sint(data_out_arb_sint),
                                     .pop_sint(pop_sint),
-                                    .push_sint(push_sint),
-                                    .cuenta_4_sint(cuenta_4_sint)
+                                    .push_sint(push_sint)
                                     );
                                    
     Probador_arbitro2 #(.WORD_SIZE(WORD_SIZE))  
@@ -62,18 +58,13 @@ module BancoPrueba_arbitro2();
                                         .data_out_arb(data_out_arb),
                                         .pop(pop),
                                         .push(push),
-                                        .cuenta_4(cuenta_4),
                                         .data_out_arb_sint(data_out_arb_sint),
-                                        .pop_sint(pop_sint),
-                                        .push_sint(push_sint),
-                                        .cuenta_4_sint(cuenta_4_sint));
+                                        .pop_sint(pop_sint));
 
 // checker para cuenta, cuenta_sint, valid y 
-reg [3:0] checker; 
+reg [2:0] checker; 
 
 always @(*) begin
-	if (cuenta_4 == cuenta_4_sint) checker[3] = 1;
-	else checker[3] = 0;
     if (data_out_arb == data_out_arb_sint) checker[2] = 1;
     else checker[2] = 0;
     if (push == push_sint) checker[1] = 1;

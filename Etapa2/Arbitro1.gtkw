@@ -1,115 +1,40 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Mon Nov 15 05:53:42 2021
+[*] Fri Nov 19 05:14:59 2021
 [*]
-[dumpfile] "/home/katharina/Descargas/Proyecto2-Digitales2-main/Etapa2_ya_casi/arbitro1.vcd"
-[dumpfile_mtime] "Mon Nov 15 05:35:36 2021"
-[dumpfile_size] 52492
-[savefile] "/home/katharina/Descargas/Proyecto2-Digitales2-main/Etapa2_ya_casi/Arbitro1.gtkw"
+[dumpfile] "/media/sf_IE-0523/Proyectos/Proyecto2Digitales2/Etapa2/arbitro1.vcd"
+[dumpfile_mtime] "Fri Nov 19 05:10:32 2021"
+[dumpfile_size] 61919
+[savefile] "/media/sf_IE-0523/Proyectos/Proyecto2Digitales2/Etapa2/Arbitro1.gtkw"
 [timestart] 0
-[size] 1540 836
-[pos] -89 -89
-*-2.301633 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1294 599
+[pos] -51 -1
+*-3.019975 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] BancoPrueba_arbitro1.
-[sst_width] 48
+[sst_width] 233
 [signals_width] 222
-[sst_expanded] 0
-[sst_vpaned_height] 226
+[sst_expanded] 1
+[sst_vpaned_height] 144
 @200
 -ENTRADAS
 @28
 BancoPrueba_arbitro1.clk
 BancoPrueba_arbitro1.reset
-@c00028
+BancoPrueba_arbitro1.fifos_empty[3:0]
+BancoPrueba_arbitro1.fifos_almost_full[3:0]
 BancoPrueba_arbitro1.fifo_data_in0[11:0]
-@28
-(0)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(1)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(2)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(3)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(4)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(5)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(6)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(7)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(8)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(9)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(10)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-(11)BancoPrueba_arbitro1.fifo_data_in0[11:0]
-@1401208
--group_end
-@28
 BancoPrueba_arbitro1.fifo_data_in1[11:0]
-@22
 BancoPrueba_arbitro1.fifo_data_in2[11:0]
 BancoPrueba_arbitro1.fifo_data_in3[11:0]
-@c00028
-BancoPrueba_arbitro1.arbitro_cond1.dest[1:0]
-@28
-(0)BancoPrueba_arbitro1.arbitro_cond1.dest[1:0]
-(1)BancoPrueba_arbitro1.arbitro_cond1.dest[1:0]
-@1401200
--group_end
-@22
-BancoPrueba_arbitro1.arbitro_cond1.data_intermediate[11:0]
-@c00028
-BancoPrueba_arbitro1.fifos_almost_full[3:0]
-@28
-(0)BancoPrueba_arbitro1.fifos_almost_full[3:0]
-(1)BancoPrueba_arbitro1.fifos_almost_full[3:0]
-(2)BancoPrueba_arbitro1.fifos_almost_full[3:0]
-(3)BancoPrueba_arbitro1.fifos_almost_full[3:0]
-@1401208
--group_end
-@c00028
-BancoPrueba_arbitro1.fifos_empty[3:0]
-@28
-(0)BancoPrueba_arbitro1.fifos_empty[3:0]
-(1)BancoPrueba_arbitro1.fifos_empty[3:0]
-(2)BancoPrueba_arbitro1.fifos_empty[3:0]
-(3)BancoPrueba_arbitro1.fifos_empty[3:0]
-@1401200
--group_end
 @200
 -SALIDAS
-@c00028
-BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
 @28
-(0)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(1)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(2)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(3)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(4)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(5)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(6)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(7)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(8)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(9)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(10)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-(11)BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
-@1401208
--group_end
-@22
-BancoPrueba_arbitro1.fifo_data_out_sint[11:0]
 BancoPrueba_arbitro1.fifos_pop[3:0]
 BancoPrueba_arbitro1.fifos_pop_sint[3:0]
-@c00028
 BancoPrueba_arbitro1.fifos_push[3:0]
-@28
-(0)BancoPrueba_arbitro1.fifos_push[3:0]
-(1)BancoPrueba_arbitro1.fifos_push[3:0]
-(2)BancoPrueba_arbitro1.fifos_push[3:0]
-(3)BancoPrueba_arbitro1.fifos_push[3:0]
-@1401208
--group_end
-@c00022
 BancoPrueba_arbitro1.fifos_push_sint[3:0]
-@28
-(0)BancoPrueba_arbitro1.fifos_push_sint[3:0]
-(1)BancoPrueba_arbitro1.fifos_push_sint[3:0]
-(2)BancoPrueba_arbitro1.fifos_push_sint[3:0]
-(3)BancoPrueba_arbitro1.fifos_push_sint[3:0]
-@1401200
--group_end
+BancoPrueba_arbitro1.fifo_data_out_cond[11:0]
+BancoPrueba_arbitro1.fifo_data_out_sint[11:0]
 @200
 -SEÑAL VERIFICADORA
 @28

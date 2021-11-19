@@ -34,6 +34,12 @@ module Probador_arbitro1 #(
 
         @(posedge clk);
         reset <= 1;
+        fifo_data_in0 <= 12'b001101001100;
+        fifo_data_in1 <= 12'b011011001111;
+        fifo_data_in2 <= 12'b101101001101;
+        fifo_data_in3 <= 12'b111100001111;
+
+        @(posedge clk);
         fifo_data_in0 <= 12'b101011001100;
         fifo_data_in1 <= 12'b101011001111;
         fifo_data_in2 <= 12'b111011001101;
@@ -70,11 +76,11 @@ module Probador_arbitro1 #(
         fifo_data_in3 <= 12'b001011110011;
 
         @(posedge clk);
-        reset <= 1;
         fifo_data_in0 <= 12'b101111011111;
         fifo_data_in1 <= 12'b011011101011;
         fifo_data_in2 <= 12'b101011101101;
         fifo_data_in3 <= 12'b111011111111;
+        fifos_empty <=  4'b1001;
 
         @(posedge clk);
         fifo_data_in0 <= 12'b111001011111;
@@ -88,23 +94,21 @@ module Probador_arbitro1 #(
         fifo_data_in1 <= 12'b111011101001;
         fifo_data_in2 <= 12'b101011101101;
         fifo_data_in3 <= 12'b001011001111;
-        fifos_almost_full <=  4'b1010;
-        fifos_empty <= 4'b1000;
+        fifos_almost_full <= 0;
 
         @(posedge clk);
         fifo_data_in0 <= 12'b111001011001;
         fifo_data_in1 <= 12'b100011101001;
         fifo_data_in2 <= 12'b101011101101;
         fifo_data_in3 <= 12'b101010001111;
-        fifos_almost_full <=  4'b1011;
+        fifos_empty <=  4'b1110;
 
         @(posedge clk);
         fifo_data_in0 <= 12'b111001011001;
         fifo_data_in1 <= 12'b100011101001;
         fifo_data_in2 <= 12'b101011101101;
         fifo_data_in3 <= 12'b101010001111;
-        fifos_almost_full <=  4'b1111;
-        fifos_empty <= 4'b0010;
+        fifos_empty <= 4'b1111;
 
         @(posedge clk);
         fifo_data_in0 <= 12'b111001011001;
@@ -112,6 +116,7 @@ module Probador_arbitro1 #(
         fifo_data_in2 <= 12'b111011101101;
         fifo_data_in3 <= 12'b011010001111;
         fifos_almost_full <=  4'b1111;
+        fifos_empty <= 0;
 
         @(posedge clk);
         @(posedge clk);

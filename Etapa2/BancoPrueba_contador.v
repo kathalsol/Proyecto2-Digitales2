@@ -19,6 +19,8 @@ module BancoPrueba_contador();
     wire pop_3;
     wire [4:0] cuenta;
     wire [4:0] cuenta_sint;
+    wire [4:0] contador_4;
+    wire [4:0] contador_4_sint;
     wire valid;
     wire valid_sint;
    
@@ -31,11 +33,13 @@ module BancoPrueba_contador();
                                         .req(req),
                                         .idx(idx),
                                         .IDLE(IDLE),
+                                        .pop(pop),
                                         .pop_0(pop_0),
                                         .pop_1(pop_1),
                                         .pop_2(pop_2),
                                         .pop_3(pop_3),
                                         .cuenta(cuenta),
+                                        .contador_4(contador_4),
                                         .valid(valid)
 );
 
@@ -46,11 +50,13 @@ module BancoPrueba_contador();
                                         .req(req),
                                         .idx(idx),
                                         .IDLE(IDLE),
+                                        .pop(pop),
                                         .pop_0(pop_0),
                                         .pop_1(pop_1),
                                         .pop_2(pop_2),
                                         .pop_3(pop_3),
                                         .cuenta_sint(cuenta_sint),
+                                        .contador_4_sint(contador_4_sint),
                                         .valid_sint(valid_sint)
 );
 
@@ -61,22 +67,27 @@ module BancoPrueba_contador();
                                         .req(req),
                                         .idx(idx),
                                         .IDLE(IDLE),
+                                        .pop(pop),
                                         .pop_0(pop_0),
                                         .pop_1(pop_1),
                                         .pop_2(pop_2),
                                         .pop_3(pop_3),
                                         .cuenta(cuenta),
                                         .cuenta_sint(cuenta_sint),
+                                        .contador_4(contador_4),
+                                        .contador_4_sint(contador_4_sint),
                                         .valid(valid),
                                         .valid_sint(valid_sint)
 );
 
 // Se guarda el checkeo de cada salida
 // checker para cuenta, cuenta_sint, valid y 
-reg [1:0] checker; 
+reg [2:0] checker; 
 
 always @(*) begin
-	if (cuenta == cuenta_sint) checker[1] = 1;
+	if (cuenta == cuenta_sint) checker[2] = 1;
+	else checker[2] = 0;
+    if (contador_4 == contador_4_sint) checker[1] = 1;
 	else checker[1] = 0;
     if (valid == valid_sint) checker[0] = 1;
     else checker[0] = 0;
