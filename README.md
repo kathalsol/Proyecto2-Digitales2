@@ -3,4 +3,4 @@
 *Ultima versión: 6 noviembre 2021*
 
 
-A la fecha de la última versión, se incluye nada =( 
+El proyecto está conformado por 3 etapas. En la primera se desarrollan los módulos de memory.v y fifo.v, que a su vez está conformado de los módulos de control_logic.v, read_logic.v y write_logic.v. En la segunda etapa se añaden los módulos del contador.v, los arbitros1.v y arbitro2.v; finalmente, en la tercera etapa se tomaron los módulos anteriores y se conectaron de manera que formaran la capa de transacción PCIE adaptada y lógica de conmutación.
