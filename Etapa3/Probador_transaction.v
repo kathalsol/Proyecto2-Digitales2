@@ -341,7 +341,7 @@ module Probador_transaction #(
         probador_pop <= 4'b1111;
 
         @(posedge clk);
-        probador_pop <= 4'b0111;
+        probador_pop <= 4'b0101;
 
         @(posedge clk);
         probador_pop <= 4'b0011;
@@ -350,7 +350,10 @@ module Probador_transaction #(
         probador_pop <= 4'b0010;
 
         @(posedge clk);
-        probador_pop <= 4'b0110;
+        probador_pop <= 4'b0010;
+
+        @(posedge clk);
+        probador_pop <= 4'b0100;
 
         @(posedge clk);
         probador_pop <= 4'b0100;
@@ -359,7 +362,7 @@ module Probador_transaction #(
         probador_pop <= 4'b1000;
 
         @(posedge clk);
-        probador_pop <= 4'b0000;
+        probador_pop <= 4'b0010;
 
         @(posedge clk);
         probador_pop <= 4'b0100;
