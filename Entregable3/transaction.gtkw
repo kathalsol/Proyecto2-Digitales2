@@ -1,0 +1,68 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Nov 27 03:10:44 2021
+[*]
+[dumpfile] "/home/kevinchen/Videos/transaction1.vcd"
+[dumpfile_mtime] "Sat Nov 27 02:06:35 2021"
+[dumpfile_size] 2253539
+[savefile] "/home/kevinchen/Videos/transaction.gtkw"
+[timestart] 0
+[size] 1294 599
+[pos] -1 -1
+*-5.821855 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] BancoPrueba_transaction.
+[treeopen] BancoPrueba_transaction.transaction_sint_1.fifo_initial.
+[treeopen] BancoPrueba_transaction.transaction_sint_1.maquina_estado_sint1.
+[sst_width] 48
+[signals_width] 206
+[sst_expanded] 0
+[sst_vpaned_height] 144
+@200
+-ENTRADAS
+@28
+BancoPrueba_transaction.probador_1.clk
+BancoPrueba_transaction.probador_1.reset
+BancoPrueba_transaction.probador_1.init
+BancoPrueba_transaction.probador_1.empty_threshold[2:0]
+BancoPrueba_transaction.probador_1.full_threshold[2:0]
+BancoPrueba_transaction.probador_1.req
+BancoPrueba_transaction.probador_1.idx[1:0]
+@22
+BancoPrueba_transaction.probador_1.data_in[11:0]
+@28
+BancoPrueba_transaction.probador_1.probador_push
+@22
+BancoPrueba_transaction.probador_1.probador_pop[3:0]
+@200
+-SALIDAS
+-conductual
+@22
+BancoPrueba_transaction.probador_1.data_out_S0[11:0]
+BancoPrueba_transaction.probador_1.data_out_S1[11:0]
+BancoPrueba_transaction.probador_1.data_out_S2[11:0]
+BancoPrueba_transaction.probador_1.data_out_S3[11:0]
+@28
+BancoPrueba_transaction.probador_1.state[1:0]
+BancoPrueba_transaction.probador_1.valid
+@24
+BancoPrueba_transaction.probador_1.cuenta[4:0]
+BancoPrueba_transaction.probador_1.contador_4[6:0]
+@200
+-estructural
+@22
+BancoPrueba_transaction.probador_1.data_out_S0_sint[11:0]
+BancoPrueba_transaction.probador_1.data_out_S1_sint[11:0]
+BancoPrueba_transaction.probador_1.data_out_S2_sint[11:0]
+BancoPrueba_transaction.probador_1.data_out_S3_sint[11:0]
+@28
+BancoPrueba_transaction.probador_1.state_sint[1:0]
+BancoPrueba_transaction.probador_1.valid_sint
+@24
+BancoPrueba_transaction.probador_1.cuenta_sint[4:0]
+BancoPrueba_transaction.probador_1.contador_4_sint[6:0]
+@200
+-SEÑAL VERIFICADORA
+@22
+BancoPrueba_transaction.checker[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
