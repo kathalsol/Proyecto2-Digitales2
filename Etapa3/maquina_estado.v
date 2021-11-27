@@ -29,7 +29,7 @@ module maquina_estado #(
 			state <= RESET;
             idle <= 0;
             fifos_empty_threshold <= 0;
-            fifos_full_threshold <= 0;
+            fifos_full_threshold <= 3'b0;
 		end
 		else begin
 			case (state)
